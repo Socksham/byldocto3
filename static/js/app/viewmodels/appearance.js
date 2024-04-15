@@ -103,17 +103,17 @@ $(function () {
 
         self.brand = ko.pureComputed(function () {
             if (self.name()) return self.name();
-            else return gettext("OctoPrint");
+            else return gettext("BYLD Innovations");
         });
 
         self.fullbrand = ko.pureComputed(function () {
-            if (self.name()) return gettext("OctoPrint") + ": " + self.name();
-            else return gettext("OctoPrint");
+            if (self.name()) return gettext("BYLD Innovations") + ": " + self.name();
+            else return gettext("BYLD Innovations");
         });
 
         self.title = ko.pureComputed(function () {
             if (self.name()) return self.name();
-            else return gettext("OctoPrint");
+            else return gettext("BYLD Innovations");
         });
 
         self.theme_color = ko.pureComputed(function () {
