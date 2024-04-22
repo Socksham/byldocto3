@@ -57,12 +57,12 @@ def connectionCommand():
                 abort(400, description="printerProfile is invalid")
         if "save" in data and data["save"]:
             settings().set(["serial", "port"], port)
-            settings().setInt(["serial", "baudrate"], baudrate)
+            settings().setInt(["serial", "baudrate"], 115200)
             printerProfileManager.set_default(printerProfile)
         if "autoconnect" in data:
             settings().setBoolean(["serial", "autoconnect"], data["autoconnect"])
         settings().save()
-        printer.connect(port=port, baudrate=baudrate, profile=printerProfile)
+        printer.connect(port=port, baudrate=115200, profile=printerProfile)
     elif command == "disconnect":
         printer.disconnect()
     elif command == "fake_ack":

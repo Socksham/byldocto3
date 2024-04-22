@@ -1140,7 +1140,7 @@ class Server:
                     )
                     printer.connect(
                         port=port,
-                        baudrate=baudrate,
+                        baudrate=115200,
                         profile=printer_profile["id"]
                         if "id" in printer_profile
                         else "_default",
