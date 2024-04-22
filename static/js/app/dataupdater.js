@@ -221,16 +221,16 @@ function DataUpdater(allViewModels, connectCallback, disconnectCallback) {
                     }
                 }
 
-                self._safeModePopup = new PNotify({
-                    title: gettext("Safe mode is active"),
-                    text: _.sprintf(
-                        gettext(
-                            "<p>The server is currently running in safe mode. Third party plugins and language packs are disabled and cannot be enabled.</p><p>Reason: %(reason)s</p>"
-                        ),
-                        {reason: _.escape(reason)}
-                    ),
-                    hide: false
-                });
+                // self._safeModePopup = new PNotify({
+                //     title: gettext("Safe mode is active"),
+                //     text: _.sprintf(
+                //         gettext(
+                //             "<p>The server is currently running in safe mode. Third party plugins and language packs are disabled and cannot be enabled.</p><p>Reason: %(reason)s</p>"
+                //         ),
+                //         {reason: _.escape(reason)}
+                //     ),
+                //     hide: false
+                // });
             }
 
             // if the offline overlay is still showing, now's a good time to
