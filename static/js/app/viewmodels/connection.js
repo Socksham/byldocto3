@@ -26,7 +26,7 @@ $(function () {
         self.baudrateOptions = ko.observableArray(undefined);
         self.printerOptions = ko.observableArray(undefined);
         self.selectedPort = ko.observable(undefined);
-        self.selectedBaudrate = ko.observable(undefined);
+        self.selectedBaudrate = ko.observable(115200);
         self.selectedPrinter = ko.observable(undefined);
         self.saveSettings = ko.observable(undefined);
         self.autoconnect = ko.observable(undefined);
@@ -87,11 +87,11 @@ $(function () {
 
         self.fromResponse = function (response) {
             var ports = response.options.ports;
-            var baudrates = response.options.baudrates;
+            var baudrates = 115200;
             var currentPort = response.current.port;
-            var currentBaudrate = response.current.baudrate;
+            var currentBaudrate = 115200;
             var currentPrinterProfile = response.current.printerProfile;
-            var portPreference = response.options.portPreference;
+            var portPreference = 115200;
             var baudratePreference = response.options.baudratePreference;
             var printerPreference = response.options.printerProfilePreference;
             var printerProfiles = response.options.printerProfiles;
@@ -168,7 +168,7 @@ $(function () {
             if (self.isErrorOrClosed()) {
                 var data = {
                     port: self.selectedPort() || "AUTO",
-                    baudrate: self.selectedBaudrate() || 0,
+                    baudrate: 115200,
                     printerProfile: self.selectedPrinter(),
                     autoconnect: self.settings.serial_autoconnect()
                 };

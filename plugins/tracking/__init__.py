@@ -145,7 +145,7 @@ class TrackingPlugin(
         elif event in (Events.CONNECTED,):
             self._printer_connection_parameters = {
                 "port": payload["port"],
-                "baudrate": payload["baudrate"],
+                "baudrate": 115200,
             }
             self._record_next_firmware_info = True
 

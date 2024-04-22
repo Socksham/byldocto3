@@ -18,7 +18,7 @@ def connectionState():
     current = {
         "state": state,
         "port": port,
-        "baudrate": baudrate,
+        "baudrate": 115200,
         "printerProfile": printer_profile["id"]
         if printer_profile is not None and "id" in printer_profile
         else "_default",
